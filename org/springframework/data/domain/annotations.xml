@@ -1,0 +1,11 @@
+<root>
+    <item name='org.springframework.data.domain.PageRequest'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='org.springframework.data.domain.Pageable'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='org.springframework.data.domain.Sort'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

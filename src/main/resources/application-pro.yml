@@ -1,0 +1,25 @@
+#日志
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.100.46.122/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: Huage990802
+#jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: true
+
+
+
+#日志
+logging:
+  level:
+    root: warn
+    com.xzh: warn
+  file:
+    path: log/blog-pro.log
+server:
+  port: 80

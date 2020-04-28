@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/common ::head(title='关于作者')}"></head>
+<body>
+  <!--导航-->
+  <nav th:replace="~{common/common :: top_bar(5)}"></nav>
+
+  <!--中间内容-->
+  <div  class="m-container m-padded-tb-big">
+    <div class="ui container">
+
+      <div class="ui stackable grid">
+        <div class="eleven wide column">
+          <div class="ui segment">
+            <img th:src="@{https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/0A/ChMkJ1bKzzSIKYw7AARsK0ItSsYAALJSwEIhIYABGxD439.jpg}" alt="" class="ui rounded image">
+          </div>
+        </div>
+        <div class="five wide column">
+          <div class="ui top attached segment">
+            <div class="ui header">关于我</div>
+          </div>
+          <div class="ui attached segment">
+            <p class="m-text">小谢，在读大学生</p>
+            <p class="m-text">喜欢编程，希望付出可以有回报^-^</p>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui orange basic left pointing label">编程</div>
+            <div class="ui orange basic left pointing label">写作</div>
+            <div class="ui orange basic left pointing label">游戏</div>
+            <div class="ui orange basic left pointing label">运动</div>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">JavaScript</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">Node</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">React</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">RN</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">MYSQL</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
+          </div>
+          <div class="ui bottom attached segment">
+            <a  class="ui qq circular icon button" data-content="1002111056" data-position="bottom center"><i class="qq icon"></i></a>
+          </div>
+
+          <div class="ui wechat-qr flowing popup transition hidden">
+            <img th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+          </div>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <!--底部footer-->
+  <footer th:replace="~{common/common :: footer}"></footer>
+  <!--引入公共script-->
+  <th:block th:replace="~{common/common :: script}"></th:block>
+
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.wechat').popup({
+      popup : $('.wechat-qr'),
+      position: 'bottom center'
+    });
+    $('.qq').popup();
+
+  </script>
+
+</body>
+</html>

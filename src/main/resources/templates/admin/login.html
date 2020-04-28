@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/addmin_common::head(title='博客管理登陆')}">
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="m-container-small m-padded-tb-massive" style=" max-width: 30em !important;">
+  <div class="ur container">
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <img th:src="@{/images/logo.ico}" class="image">
+      <div class="content">
+        博客管理后台登陆
+      </div>
+    </h2>
+    <form class="ui large form" method="post" th:action="@{/admin/login}">
+      <div class="ui  segment">
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="用户名：" required="required" oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="密码：" required="required" oninvalid="setCustomValidity('密码不能为空');" oninput="setCustomValidity('');">
+          </div>
+        </div>
+
+        <button type="submit" class="ui fluid large teal submit button">登      陆</button>
+      </div>
+
+      <div class="ui error mini message"></div>
+      <p class="ui  mini negative message " style="color: red" th:text="${message}" th:if="!${#strings.isEmpty(message)}"></p>
+    </form>
+
+  </div>
+</div>
+  </div>
+</div>
+
+<!--引入公共script-->
+<th:block th:replace="~{common/addmin_common :: script}"></th:block>
+<script>
+
+</script>
+</body>
+</html>

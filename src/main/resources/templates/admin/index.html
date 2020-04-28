@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/addmin_common::head(title='博客管理')}">
+<body>
+
+  <!--导航-->
+  <nav th:replace="~{common/addmin_common:: top_bar(0)}"></nav>
+
+
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+         <div class="ui success large message">
+           <h3>Hi</h3>
+           <p>谢志华，欢迎登陆！</p>
+         </div>
+      <img th:src="@{https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/0A/ChMkJ1bKzzSIKYw7AARsK0ItSsYAALJSwEIhIYABGxD439.jpg}" class="ui rounded bordered fluid image">
+
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <!--底部footer-->
+  <footer th:replace="~{common/addmin_common :: footer}"></footer>
+  <!--引入公共script-->
+  <th:block th:replace="~{common/addmin_common :: script}"></th:block>
+
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+  </script>
+</body>
+</html>
